@@ -28,7 +28,7 @@ public class Car {
         this.year = newYear;
     }
 
-    void Print(){
+    void print(){
         System.out.println("Марка машины: " + this.brand + " Год выпуска: " + this.year );
     }
 

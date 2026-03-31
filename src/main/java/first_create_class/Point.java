@@ -25,7 +25,7 @@ void setY(int newY){
         this.y = newY;
 }
 
-void Print(){
+void print(){
         System.out.println("Координаты: " + x + " ; " + y); //если мы в декартовой системе и берем целые числа для удобства
 }
 

@@ -4,17 +4,17 @@ public class Main {
     static void main(String[] args){
 
 //        Car mersedes = new Car("Mersedes", 1995);
-//        mersedes.Print();
+//        mersedes.print();
 //        //вызов сеттера
 //        mersedes.setYear(2026);
-//        mersedes.Print();
+//        mersedes.print();
 
 //        Rectangle rectangle1 = new Rectangle(3, 5);
-//        rectangle1.Print();
+//        rectangle1.print();
 //        int square1 = rectangle1.calculateArea();
 //        System.out.println("Площадь: " +  square1);
 //        rectangle1.setWidth(6);
-//        rectangle1.Print();
+//        rectangle1.print();
 //        System.out.println("Площадь2:" + rectangle1.calculateArea()); //площадь с новой шириной, сделала сама, но пришлось думать
 
 //        Book book1 = new Book("Книга Балтиморов", "Жоэль Диккер");
@@ -22,15 +22,14 @@ public class Main {
 //        book1.setAuthor("Загуглите сами");
 //        book1.printInfo();
 
-//        BankAccount bankAccount1 = new BankAccount("Anastasiia",3000); // как будто бы тут можно упростить, гуглить не стала решила оставить текущее решение
-//        double deposit1 = bankAccount1.deposit();
-//        bankAccount1.setBalance(bankAccount1.deposit());
-//        double withdraw1 = bankAccount1.withdraw();
-//        System.out.println("Сумма после внесения: " + deposit1 +" Сумма после снятия " +  withdraw1);
+//        BankAccount bankAccount1 = new BankAccount("Anastasiia",3000);
+//        double topUP = bankAccount1.deposit(1000);
+//        double withdraw1 = bankAccount1.withdraw(100);
+//        System.out.println("Сумма после внесения: " + topUP +" Сумма после снятия " + withdraw1);
 
 //        Point point1 = new Point(11,-20);
 //        point1.setX(15);
-//        point1.Print();
+//        point1.print();
 
 //        StudentGroup studentGroup1 = new StudentGroup("Happy people", 15);
 //        studentGroup1.setStudentCount(21);
@@ -52,11 +51,11 @@ public class Main {
 //        laptop1.setPrice(180000);
 //        laptop1.printInfo();
 
-        Product product1 = new Product("Shoes",12000);
-        product1.setPrice(10000);
-        int sale = product1.applyDiscount(10);
-        product1.setPrice(sale);
-        product1.printInfo();
+//        Product product1 = new Product("Shoes",12000);
+//        product1.setPrice(10000);
+//        int sale = product1.applyDiscount(10);
+//        product1.setPrice(sale);
+//        product1.printInfo();
 }
 
 

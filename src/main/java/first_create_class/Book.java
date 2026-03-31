@@ -1,6 +1,5 @@
 package first_create_class;
 
-import practice_2.Student;
 
 public class Book {
     String title;

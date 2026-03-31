@@ -18,21 +18,19 @@ public class BankAccount {
     }
 
     void setOwner(String newOwner){
-        this.owner = newOwner;
+         this.owner = newOwner;
     }
 
-    void setBalance(double newBalance){
-        this.balance = newBalance;
+    double setBalance(double newBalance){ // заменила в сеттере тип возвращаемых данных
+        return this.balance = newBalance;
     }
 
-    double deposit(){
-        double amount = balance + 1000;
-        return amount;
+    double deposit( double amount){ //добавила формулу, используя геттеры
+        return setBalance(amount + getBalance());
     }
 
-    double withdraw(){
-        double amount = balance - 100;
-        return amount;
+    double withdraw(double amount){
+        return setBalance(getBalance() - amount);
     }
 
 

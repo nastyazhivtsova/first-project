@@ -28,7 +28,7 @@ public class Rectangle {
         return width * height ;
     }
 
-    void Print() {
+    void print() {
         System.out.println("Высота: " + this.height + " Ширина: " + this.width);
 
     }
