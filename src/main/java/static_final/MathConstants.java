@@ -2,7 +2,7 @@ package static_final;
 
 public class MathConstants {
     final static double PI = 3.14159;
-    final double E = 2.71828;
+    final static double E = 2.71828;
 
     static double calculateCircleArea(double r){//площадь круга
 
@@ -13,8 +13,8 @@ public class MathConstants {
         return 2 * PI * r;
     }
 
-    double calculateExponentialGrowth(double initialValue, double rate, double time){
-        return initialValue + Math.pow(E,rate * time);
+    static double calculateExponentialGrowth(double initialValue, double rate, double time){
+        return initialValue * Math.pow(E,rate * time);
 
     }
 

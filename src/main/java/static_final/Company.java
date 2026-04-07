@@ -22,7 +22,7 @@ public class Company {
 //        this.employeeID = newEmployeeId;
 //    }
 
-    void printCompanyName(){
+    static void printCompanyName(){
         System.out.println(companyName);
     }
 
