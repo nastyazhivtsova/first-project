@@ -18,11 +18,10 @@ public class Main {
 //        System.out.println(a.calculateExponentialGrowth(4,2,3));
 
 
-//        GameSettings game1 = new GameSettings(12);
-//        GameSettings game2 = new GameSettings(14);
+
+//        GameSettings.addPlayer();
 //        GameSettings.setMaxPlayers(14);
-//        game1.addPlayer();
-//        game1.printGameStatus();
+//        GameSettings.printGameStatus();
 
 //        Person anna = new Person("Anna","Fedorova", "125-013-452");
 //        Person vladimir = new Person("Vladimir", "Rodin", "125-012-789");

@@ -2,22 +2,22 @@ package static_final;
 
 public class GameSettings {
     static int maxPlayers;
-    final String GAME_NAME = "Волейбол";
-    int currentPlayers;
+    static final String GAME_NAME = "Волейбол";
+    static int currentPlayers = 10;
 
-    GameSettings (int someCurrentPlayers){
-        this.currentPlayers = someCurrentPlayers;
+//    GameSettings (int someCurrentPlayers){
+//        currentPlayers = someCurrentPlayers;
+//    }
+
+    static void setMaxPlayers(int newMaxPlayers){
+         maxPlayers = newMaxPlayers;
     }
 
-    static int setMaxPlayers(int newMaxPlayers){
-        return maxPlayers = newMaxPlayers;
+    static void addPlayer(){
+         currentPlayers++;
     }
 
-    int addPlayer(){
-        return currentPlayers++;
-    }
-
-    void printGameStatus(){
+    static void printGameStatus(){
         System.out.println("Название игры: " + GAME_NAME + " Текущее количество участников: " + currentPlayers + " Максимальное количество игроков: " + maxPlayers);
     }
 

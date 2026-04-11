@@ -11,8 +11,8 @@ public class University {
     }
 
 
-    static String changeUniversityName(String newName){
-        return universityName = newName;
+    static void changeUniversityName(String newName){
+         universityName = newName;
     }
 
     String getStudentName(){
