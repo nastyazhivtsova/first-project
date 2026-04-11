@@ -11,7 +11,7 @@ public class IfElseSolver {
 //        checkMaxNumber();
 
         // Вывод оценки по шкале 1–5
-        System.out.print(printEvaluation());
+//        System.out.print(printEvaluation());
 
         // проверка на четность
 //        System.out.println(checkParity());
