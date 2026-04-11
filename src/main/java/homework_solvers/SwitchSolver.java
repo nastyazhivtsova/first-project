@@ -17,22 +17,25 @@ public class SwitchSolver {
 //        System.out.print(checkCommand());
 
         //Простой калькулятор с использованием switch
-        System.out.print("Результат: " + calculyator());
+//        System.out.print("Результат: " + simpleCalculator());
 
+        //Простой калькулятор2 с использованием switch
+//        System.out.print(simpleCalculator2());
 
 
     }
 
-    /**  Вывод дня недели по номеру
+    /**
+     * Вывод дня недели по номеру
      * взяла из практики доработала ввод с консоли
      */
-    public static String dayOfWeek(){
+    public static String dayOfWeek() {
         Scanner scanner = new Scanner(System.in);
         int day;
         System.out.print("Введите число от 1 до 7: ");
         day = scanner.nextInt();
         String dayOfWeek = "";
-        switch (day){
+        switch (day) {
             case 1:
                 dayOfWeek = "ПН";
                 break;
@@ -62,16 +65,17 @@ public class SwitchSolver {
 
     }
 
-    /** Стоимость билета по дню недели
+    /**
+     * Стоимость билета по дню недели
      *
      */
-    public static void checkTicketPrice(){ // здесь задумалась о том, что как-то наверно можно было бы переиспользовать метод выше
+    public static void checkTicketPrice() { // здесь задумалась о том, что как-то наверно можно было бы переиспользовать метод выше
         Scanner scanner = new Scanner(System.in);
         int day;
         System.out.print("Введите число от 1 до 7, где 1 - это ПН, а 7 - это ВС: ");
         day = scanner.nextInt();
 
-        switch (day){ // здесь загуглила как оптимизировать запись
+        switch (day) { // здесь загуглила как оптимизировать запись
             case 1, 2, 3, 4, 5 -> System.out.print("Стоимость билета 300 рублей");
             case 6, 7 -> System.out.print("Стоимость билета 450 рублей");
             default -> System.out.print("Несуществующий день недели");
@@ -85,7 +89,7 @@ public class SwitchSolver {
      * подумала что можно было бы ввод количества балло зациклить,если введено неверно :)
      */
 
-    public static String checkEvalution(){
+    public static String checkEvalution() {
         Scanner scanner = new Scanner(System.in);
         int points;
         System.out.print("Введите количество баллов от 0 до 100: ");
@@ -93,23 +97,23 @@ public class SwitchSolver {
         int determinant = 0;
         String evalutuion = "Введено неверное количество баллов ";
 
-        if (points >= 0 && points < 60){
+        if (points >= 0 && points < 60) {
             determinant = 1;
-      }
-        if (points >= 60 && points <= 69){
+        }
+        if (points >= 60 && points <= 69) {
             determinant = 2;
         }
-        if (points >= 70 && points <= 79){
+        if (points >= 70 && points <= 79) {
             determinant = 3;
         }
-        if (points >= 80 && points <= 89){
+        if (points >= 80 && points <= 89) {
             determinant = 4;
         }
-        if (points >= 90 && points <= 100){
+        if (points >= 90 && points <= 100) {
             determinant = 5;
         }
 
-        switch (determinant){
+        switch (determinant) {
             case 1:
                 evalutuion = "Ваша оценка F";
                 break;
@@ -133,14 +137,14 @@ public class SwitchSolver {
     /**
      * Обработка текстовых команд
      */
-    public static String checkCommand(){
+    public static String checkCommand() {
         Scanner scanner = new Scanner(System.in);
         int command;
         System.out.print("Введите команду от 1 до 4, где   \"1 - start\", \"2 - stop\", \"3 - restart\" или \"4 - status\": ");
         command = scanner.nextInt();
         String commandForPrint = "";
 
-        switch (command){ // тут я подумала а что если в кейсе передавать стрингу тоже можно (это не сработало)
+        switch (command) { // тут я подумала а что если в кейсе передавать стрингу тоже можно (это не сработало)
             case 1:
                 commandForPrint = "Система запущена";
                 break;
@@ -164,7 +168,7 @@ public class SwitchSolver {
     /**
      * Простой калькулятор с использованием switch
      */
-    public static double calculyator(){
+    public static double simpleCalculator() {
         Scanner scanner = new Scanner(System.in);
         double a;
         System.out.print("Введите число a: ");
@@ -177,7 +181,7 @@ public class SwitchSolver {
         System.out.print("Введите операцию от 1 до 4, где 1 -сложить, 2 - вычесть, 3 - умножить, 4 - разделить: ");
         operation = scanner.nextInt();
 
-        switch (operation){
+        switch (operation) {
             case 1:
                 result = a + b;
                 break;
@@ -190,7 +194,7 @@ public class SwitchSolver {
             case 4:
                 if (b == 0) { // этот момент загуглила, логику поняла
                     System.out.println("⛔ Ошибка: деление на ноль невозможно!");
-                    return 0; // или Integer.MIN_VALUE, чтобы отличить от реального 0
+                    return 0; //
                 }
                 result = a / b;
                 break;
@@ -200,9 +204,48 @@ public class SwitchSolver {
         }
         return result;
 
-
     }
 
+    /**
+     * Простой калькулятор с использованием switch 2, решение от ИИ (я его разобрала)
+     */
+
+    public static double simpleCalculator2() {
+        Scanner scanner = new Scanner(System.in);
+        double a;
+        System.out.print("Введите число a: ");
+        a = scanner.nextInt();
+        double b;
+        System.out.print("Введите число b: ");
+        b = scanner.nextInt();
+        double result = 0;
+        String operation;
+        System.out.print("Введите операцию ( +, - , *, /): ");
+        operation = scanner.next(); // чтение строки
+
+        switch (operation) {
+            case "+":
+                result = a + b;
+                break;
+            case "-":
+                result = a - b;
+                break;
+            case "*":
+                result = a * b;
+                break;
+            case "/":
+                if (b == 0) {
+                    System.out.println("⛔ Ошибка: деление на ноль невозможно!");
+                    return 0;
+                }
+                result = a / b;
+                break;
+            default:
+                System.out.println("⛔ Неверная операция.");
+                return 0;
+        }
+        return result;
 
 
+    }
 }
