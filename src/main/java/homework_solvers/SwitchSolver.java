@@ -17,7 +17,7 @@ public class SwitchSolver {
 //        System.out.print(checkCommand());
 
         //Простой калькулятор с использованием switch
-        System.out.print(calculyator());
+        System.out.print("Результат: " + calculyator());
 
 
 
@@ -164,15 +164,15 @@ public class SwitchSolver {
     /**
      * Простой калькулятор с использованием switch
      */
-    public static int calculyator(){
+    public static double calculyator(){
         Scanner scanner = new Scanner(System.in);
-        int a;
+        double a;
         System.out.print("Введите число a: ");
         a = scanner.nextInt();
-        int b;
+        double b;
         System.out.print("Введите число b: ");
         b = scanner.nextInt();
-        int result = 0;
+        double result = 0;
         int operation;
         System.out.print("Введите операцию от 1 до 4, где 1 -сложить, 2 - вычесть, 3 - умножить, 4 - разделить: ");
         operation = scanner.nextInt();
