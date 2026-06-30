@@ -86,7 +86,7 @@ public static double findHypotenuse(double a, double b){ // поиск гипо�
     return Math.sqrt(a * a + b * b); // воспользоалась ИИ
 }
 
-public static double circleCircumference (double radius){// окружность
+public static double circleCircumference (double radius){// длина окружность
         return 2* Math.PI * radius;
 }
 

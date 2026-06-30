@@ -10,6 +10,7 @@ public class Product {
     }
 
     String getName(){
+
         return name;
     }
 
